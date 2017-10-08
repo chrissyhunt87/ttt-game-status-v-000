@@ -50,5 +50,11 @@ def over?(board)
 end
 
 def winner(board)
-  
+  if won?(board)[0] == "X"
+    return "X"
+  elsif won?(board)[0] == "O"
+    return "O"
+  else
+    return nil
+  end
 end
