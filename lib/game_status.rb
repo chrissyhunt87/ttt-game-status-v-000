@@ -26,3 +26,9 @@ def won?(board)
   end
   return win
 end
+
+def full?(board)
+  board.any? do | space |
+    space == " " || space == "" || space == nil
+  end
+end
