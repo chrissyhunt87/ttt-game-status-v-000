@@ -16,3 +16,12 @@ WIN_COMBINATIONS = [
   [2,4,6] #r to l diagonal
 ]
 
+def won?(board)
+  WIN_COMBINATIONS.each do | win_combo |
+    if board[win_combo[0]] == "X" && board[win_combo[1]] == "X" && board[win_combo[2]] == "X"
+      return win_combo
+    else
+      return false
+    end
+  end
+end
